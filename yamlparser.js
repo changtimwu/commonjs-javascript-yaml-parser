@@ -302,7 +302,7 @@ var YAML =
                 var line = lines[i];
 
                 if(m = line.match(regex["key"])) {
-                    var key = m[1];
+                    var key = m[1].replace(/\s+$/,"");
                     
                     if(key[0] == '-') {
                         key = key.replace(regex["item"], "");
